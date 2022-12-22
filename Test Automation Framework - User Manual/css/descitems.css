@@ -1,0 +1,31 @@
+/*Description Images*/
+.imgdesc{
+    margin-left: auto;
+    margin-right: auto;
+    width:900px; 
+    height:500px;
+}
+
+.imgdescSP{
+    width:auto; 
+    height:auto;
+}
+
+
+/*Description Text*/
+.text{
+
+}
+
+.textcenter{
+    text-align: center;
+}
+
+.textbold{
+    font-weight: bold;
+}
+
+p{
+  line-height: 2 ;
+  margin: 15;
+}

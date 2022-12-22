@@ -1,0 +1,55 @@
+body {
+    background-color: rgba(var(--bg));
+    color: rgba(var(--txt));
+    font-family: RobotoLightNew, Ubuntu, helvetica, sans-serif;
+    font-size: 1rem;
+    text-shadow: var(--txt-shadow);
+    transition: background-color 250ms, color 250ms;
+  }
+
+  html:before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 100vh;
+    z-index: -5;
+    background: var(--bg-grd);
+  }
+
+  body:before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 100vh;
+    background-attachment: initial;
+    background-color: transparent;
+    background-image:'../../images/BG.png';
+    background-size: 4.6875rem;
+    background-repeat: repeat;
+    z-index: -5;
+  }
+  
+  html:after {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: -10;
+    height: 100vh;
+    background-color: rgba(var(--bg-02));
+    background-image: url('');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: inherit;
+    /* background-size: cover; */
+    background-size: 75% 75%;
+    /* transition: all 250ms linear; */
+  }
+
+
+
