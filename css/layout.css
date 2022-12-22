@@ -1,0 +1,19 @@
+/* LAYOUT ---------------------------------- */
+
+/* Default / Horizontal */
+:root {
+    --display: grid;
+    --grid-template-rows: 85px auto;
+    --grid-template-columns:350px auto;
+    --grid-auto-flow: row;
+    --gap: 0.4rem;
+    --resize: initial;
+    --min-width: 1rem;
+    --max-width: calc(115vw - 35rem);
+    --nth-child: ;
+  }
+
+  .Descriptions{
+    grid-column: 2;
+    
+  }

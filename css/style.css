@@ -1,0 +1,152 @@
+/* RESET ---------------------------------- */
+
+*:before, *:after, *, ::after, ::before {box-sizing: border-box;}
+body {padding: 0; margin: 0;}
+
+
+/* SCAFFOLDING ---------------------------------- */
+
+/* PANEL WRAPPER */
+app-container {
+  display: grid;
+  grid-template-rows: var(--grid-template-rows);
+  grid-template-columns: var(--grid-template-columns);
+  gap: var(--gap);
+  padding: 0.25rem;
+  height: 100vh; /* push HEADER/FOOTER to the top/bottom of viewport */
+  overflow: hidden;
+}
+
+app-container:has(:nth-child(3):nth-last-child(2)) app-panel:nth-child(3) {
+  resize: var(--resize);
+  min-width: var(--min-width);
+  /* set a max value to keep a minimum width for meta column */
+  max-width: var(--max-width); 
+}
+
+/* ALL PANELS */
+app-panel {
+  display: grid;
+  background-color: rgba(var(--bg-panel));
+  border-radius: .4rem;
+  overflow: hidden;
+  align-content: start;
+  transition: background-color 250ms;
+}
+
+/* HEADER PANEL */
+/*Inside of header*/
+.Header {
+  grid-template-columns: auto 1fr auto auto;
+  grid-column: 1 / 3;
+  grid-row: 1;
+  
+}
+
+/* SCROLLABLE */
+panel-list {
+  display: grid;
+  grid-auto-flow: var(--grid-auto-flow);
+  overflow: auto;
+  margin-left: 10px;
+}
+
+panel-tab panel-list {grid-auto-flow: var(--grid-auto-flow_tab)}
+
+/* If there is 1 column */
+label,  
+list-item,
+panel-header {
+  display: grid;
+  grid-auto-flow: column;
+  align-items: center;
+}
+panel-header {
+  display: var(--display);
+}
+/* If there are 2 COLUMNS */
+app-panel label:has(> :last-child:nth-child(2)),  
+app-panel list-item:has(> :last-child:nth-child(2)),
+app-panel panel-header:has(> :last-child:nth-child(2)) {
+  grid-template-columns: auto 1fr auto;
+}
+/* If there are 3 COLUMNS  */
+app-panel label:has(> :last-child:nth-child(3)),  
+app-panel list-item:has(> :last-child:nth-child(3)),
+app-panel panel-header:has(> :last-child:nth-child(3)) {
+  grid-template-columns: 1fr auto auto;
+}
+/* If there are 4 COLUMNS */
+app-panel label:has(> :last-child:nth-child(4)),  
+app-panel list-item:has(> :last-child:nth-child(4)),
+app-panel panel-header:has(> :last-child:nth-child(4)) {
+  grid-template-columns: auto 1fr auto auto;
+}
+
+app-panel label:hover,
+app-panel label:has(> input:checked) {
+  background-color: rgba(var(--bg-active));
+  color: rgba(var(--txt-active));
+}
+
+list-cell {padding: .5rem;}
+
+app-panel input {
+  display: none;
+  /* accent-color: rgba(var(--accent)); */
+}
+
+app-panel panel-header {padding: 1.0rem;}
+
+app-panel p {padding: 0 1rem;}
+
+app-panel meta-data {
+  font-size: 0.8rem;
+  opacity: 0.5;
+  font-stretch: 100;
+  font-style: RobotoLightNew, Ubuntu, helvetica, sans-serif;
+  letter-spacing: 0.04rem;
+}
+
+app-panel:nth-of-type(2) label[for="radio02"]:has(input:checked) + app-panel:has(panel-list label[for="list02Item01"]) {
+	display: grid;
+}
+
+
+powered-by,
+app-logo {padding: 1rem;}
+
+
+/* SCROLLBARS ---------------------------------- */
+
+  *::-webkit-scrollbar {display: block; width: 1rem;}
+  *::-webkit-scrollbar-button {display: none;}
+  *::-webkit-scrollbar-track {background-color: rgba(48,190,255,0.0);}
+  *::-webkit-scrollbar-track-piece {background-color: rgba(48,190,255,0.0);}
+  * {--scrollbar-color: rgba(48,190,255,0.0);}
+  *:hover, *:focus, *:focus-within {--scrollbar-color: rgba(var(--bg-active)) !important;}
+  *::-webkit-scrollbar-thumb {
+    background-color: rgba(48,190,255,0.0);
+    border: 5px solid transparent;
+    border-radius: 1.5rem;
+    box-shadow: 0.25rem 0 0 0.25rem var(--scrollbar-color) inset;
+  }
+  *::-webkit-scrollbar-thumb:hover {
+    background-color: var(--scrollbar-color);
+    border: 0 solid transparent;
+    box-shadow: none;
+  }
+
+  /* https://codeconvey.com/custom-scrollbar-css-for-all-browsers/ */
+  panel-list,
+  app-panel-scroll {
+    scrollbar-color: rgba(48,190,255,0.0) rgba(48,190,255,0.0); /* Thumb and track color */
+    scrollbar-width: thin; /* Track width */
+    transition: scrollbar-color 250ms;
+  }
+  panel-list:hover {scrollbar-color: rgba(48, 189, 255, 0.563) rgba(48,190,255,0.0);}
+  app-panel-scroll:hover {scrollbar-color: rgba(48, 189, 255, 0.638) rgba(48,190,255,0.0);}
+
+
+
+  
