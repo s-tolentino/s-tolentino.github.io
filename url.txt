@@ -1,6 +1,0 @@
-https://frameworkusermanual.tech
-
-remove footer
-remove theme
-fix button 
-remove GETTEXT
