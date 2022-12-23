@@ -1,0 +1,78 @@
+/* TABS */
+
+panel-tab {overflow: hidden;}
+
+app-panel:nth-of-type(3)  panel-tab  {display: none;}
+
+
+
+app-panel:nth-of-type(2):has(#radio01:checked) ~ app-panel:nth-of-type(3) #tab01,
+app-panel:nth-of-type(2):has(#radio02:checked) ~ app-panel:nth-of-type(3) #tab02,
+app-panel:nth-of-type(2):has(#radio03:checked) ~ app-panel:nth-of-type(3) #tab03,
+app-panel:nth-of-type(2):has(#radio04:checked) ~ app-panel:nth-of-type(3) #tab04,
+app-panel:nth-of-type(2):has(#radio05:checked) ~ app-panel:nth-of-type(3) #tab05,
+app-panel:nth-of-type(2):has(#radio06:checked) ~ app-panel:nth-of-type(3) #tab06,
+app-panel:nth-of-type(2):has(#radio07:checked) ~ app-panel:nth-of-type(3) #tab07,
+app-panel:nth-of-type(2):has(#radio08:checked) ~ app-panel:nth-of-type(3) #tab08,
+app-panel:nth-of-type(2):has(#radio09:checked) ~ app-panel:nth-of-type(3) #tab09,
+app-panel:nth-of-type(2):has(#radio10:checked) ~ app-panel:nth-of-type(3) #tab10,
+app-panel:nth-of-type(2):has(#radio11:checked) ~ app-panel:nth-of-type(3) #tab11,
+app-panel:nth-of-type(2):has(#radio12:checked) ~ app-panel:nth-of-type(3) #tab12,
+app-panel:nth-of-type(2):has(#radio13:checked) ~ app-panel:nth-of-type(3) #tab13,
+app-panel:nth-of-type(2):has(#radio14:checked) ~ app-panel:nth-of-type(3) #tab14,
+app-panel:nth-of-type(2):has(#radio15:checked) ~ app-panel:nth-of-type(3) #tab15,
+app-panel:nth-of-type(2):has(#radio16:checked) ~ app-panel:nth-of-type(3) #tab16,
+app-panel:nth-of-type(2):has(#radio17:checked) ~ app-panel:nth-of-type(3) #tab17,
+app-panel:nth-of-type(2):has(#radio18:checked) ~ app-panel:nth-of-type(3) #tab18,
+app-panel:nth-of-type(2):has(#radio19:checked) ~ app-panel:nth-of-type(3) #tab19,
+app-panel:nth-of-type(2):has(#radio20:checked) ~ app-panel:nth-of-type(3) #tab20,
+app-panel:nth-of-type(2):has(#radio21:checked) ~ app-panel:nth-of-type(3) #tab21,
+app-panel:nth-of-type(2):has(#radio22:checked) ~ app-panel:nth-of-type(3) #tab22,
+app-panel:nth-of-type(2):has(#radio23:checked) ~ app-panel:nth-of-type(3) #tab23,
+app-panel:nth-of-type(2):has(#radio24:checked) ~ app-panel:nth-of-type(3) #tab24,
+app-panel:nth-of-type(2):has(#radio25:checked) ~ app-panel:nth-of-type(3) #tab25,
+app-panel:nth-of-type(2):has(#radio26:checked) ~ app-panel:nth-of-type(3) #tab26,
+app-panel:nth-of-type(2):has(#radio27:checked) ~ app-panel:nth-of-type(3) #tab27,
+app-panel:nth-of-type(2):has(#radio28:checked) ~ app-panel:nth-of-type(3) #tab28,
+app-panel:nth-of-type(2):has(#radio29:checked) ~ app-panel:nth-of-type(3) #tab29,
+app-panel:nth-of-type(2):has(#radio30:checked) ~ app-panel:nth-of-type(3) #tab30,
+app-panel:nth-of-type(2):has(#radio31:checked) ~ app-panel:nth-of-type(3) #tab31,
+app-panel:nth-of-type(2):has(#radio32:checked) ~ app-panel:nth-of-type(3) #tab32 {display: grid;}
+
+
+
+
+.titleheader{
+  font-size: 20px;
+
+} 
+
+
+/**dropdown button & Container**/
+.dropdown-container {
+  display: none;
+  background-color: #2c384a;
+  padding-left: 8px;
+  
+}
+
+.dropdown-btn {
+    padding: 8px;
+    text-decoration: none;
+    font-size: 17px;
+    color: #ffffffb3;
+    display: block;
+    border: none;
+    background: none;
+    width: 100%;
+    text-align: left;
+    cursor: pointer;
+    outline: none;
+  }
+  .dropdown-btn:hover {
+    background-color: rgba(48, 189, 255, 0.21);
+  }
+
+list-cells{
+  font-size: 15px;
+}
